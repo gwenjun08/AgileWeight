@@ -1,6 +1,7 @@
 /build
 /.gradle
 /.idea
+/react_native/.idea
 local.properties
 *.iml
 *.orig
