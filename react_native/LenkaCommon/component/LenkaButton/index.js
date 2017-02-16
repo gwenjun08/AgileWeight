@@ -14,11 +14,16 @@ import {
 
 class LenkaButton extends Component {
     render(){
+        let textable = true;
+        if(!this.props.text || this.props.text == "") {
+            textable = false;
+        }
+
         return(
             <TouchableOpacity style={styles.container}
                 onPress={this.props.onPress}>
                 {this.props.imageSrc && <Image source={this.props.imageSrc} style={{width:40, height:40}}/>}
-                {this.props.text && <Text style={{color:this.props.textColor}}>{this.props.text}</Text>}
+                {textable && <Text style={{color:this.props.textColor}}>{this.props.text}</Text>}
             </TouchableOpacity>
         )
     }
@@ -39,7 +44,6 @@ LenkaButton.defaultProps = {
 
 var styles = StyleSheet.create({
     container:{
-        flex:1,
         flexDirection:'row',
         justifyContent:'center',
         alignItems:'center'

@@ -30,10 +30,12 @@ class LenkaNavigator extends Component {
 
         let Screen;
         if(route.screen && typeof route.screen === 'string') {
-            let screens = route.screen.split('.');
+            let screens = route.screen.split('\.');
             if(screens.length <= 1) {
                 Screen = require(screens[0])['mainScreen'];
             } else {
+                console.log(screens[0] === 'LenkaHome');
+                console.log(require(screens[0] + ''));
                 Screen = require(screens[0])[screens[1]];
             }
 

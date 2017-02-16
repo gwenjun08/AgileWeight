@@ -9,14 +9,13 @@ import {
 } from 'react-native';
 
 import { LenkaNavigator } from 'LenkaCommon';
-
-import { FirstPage, TestScreen } from 'test';
+import {HomeScreen} from 'LenkaHome';
 
 class HelloWorld extends React.Component {
 
     render() {
         return(
-            <LenkaNavigator style={styles.container} initialRoute={{screen:'test.FirstPage'}}></LenkaNavigator>
+            <LenkaNavigator style={styles.container} initialRoute={{screen:'LenkaHome.HomeScreen'}}></LenkaNavigator>
         )
     }
 }

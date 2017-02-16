@@ -22,16 +22,25 @@ let a = fonts.Grid.a;
 class LenkaNavBar extends Component {
 
     render() {
-        let t = 1;
-        let titles = t === 1 ? "111":"历史";
-        return(<View style={styles.container}>
-            <Text style={styles.titleTextStyle}>敏捷减肥</Text>
-            <View style={styles.buttonsViewStyle}>
-                <LenkaButton text={titles}
-                    textColor='red'/>
-            </View>
+        let { titleColor, buttonTextColor, title, leftText, rightText } = this.props;
 
-        </View>);
+        let titleTextStyle = {
+            color:titleColor
+        };
+
+        return(
+            <View>
+                <View style={styles.container}>
+                    <Text style={[styles.titleTextStyle, titleTextStyle]}>{title}</Text>
+                    <View style={styles.buttonsViewStyle}>
+                        <LenkaButton text={leftText}
+                                     textColor={buttonTextColor}/>
+                        <LenkaButton text={rightText}
+                                     textColor={buttonTextColor}/>
+                    </View>
+                </View>
+                <View style={styles.lineStyle} />
+            </View>);
     }
 
 }
@@ -59,6 +68,10 @@ var styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center'
+    },
+    lineStyle:{
+        height:1,
+        backgroundColor:'#4b385f'
     }
 });
 
