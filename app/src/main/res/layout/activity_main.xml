@@ -15,4 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <com.lenka.framework.UIKit.TickMarkView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/react_native_btn"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

@@ -13,6 +13,7 @@ import { BaseComponent, fonts } from 'LenkaCommon';
 import LenkaNavBar from 'LenkaNavBar';
 import LenkaButton from 'LenkaButton';
 import LenkaRatio from 'LenkaRatio';
+import {TickMarkView} from 'nativeView';
 
 
 let A = fonts.Grid.A;
@@ -81,7 +82,10 @@ class HomeScreen extends BaseComponent {
                             textColor={{unCheckColor:"#ffffff66", checkedColor:'white'}}/>
                     </View>
 
-                    <View style={styles.downContentView}></View>
+                    <View style={styles.downContentView}>
+                        <TickMarkView
+                            style={{width:4*A, height:300}}/>
+                    </View>
 
                 </ScrollView>
 

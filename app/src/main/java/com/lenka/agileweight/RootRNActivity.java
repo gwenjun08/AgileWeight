@@ -9,6 +9,7 @@ import com.facebook.react.ReactRootView;
 import com.facebook.react.common.LifecycleState;
 import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler;
 import com.facebook.react.shell.MainReactPackage;
+import com.lenka.framework.reactnative.reactpackage.FrameworkReactPackage;
 
 /**
  * Created by ganwenjun on 17/2/8.
@@ -29,6 +30,7 @@ public class RootRNActivity extends Activity implements DefaultHardwareBackBtnHa
                 .setBundleAssetName("index.android.bundle")
                 .setJSMainModuleName("index")
                 .addPackage(new MainReactPackage())
+                .addPackage(new FrameworkReactPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build();
